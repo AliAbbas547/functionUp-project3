@@ -15,7 +15,7 @@ router.post("/", function(req,res){
 router.post("/register",userController.createUser)
 router.post("/login",userController.login)
 router.post("/books",middleware.authenticate,BooksController.createBooks)
-router.get("/books",middleware.authenticate,BooksController.getBooksData)
+router.get("/books",BooksController.getBooksData)
 router.get("/books/:bookId",middleware.authenticate,BooksController.getBooksDataWithReviews)
 router.put("/books/:bookId",middleware.authenticate,middleware.authorize,BooksController.updateBooksData)
 router.delete("/books/:bookId",middleware.authenticate,middleware.authorize,BooksController.deleteBooksData)
