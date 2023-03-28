@@ -1,6 +1,6 @@
 const express= require("express")
 const router= express.Router()
-const aws= require("aws-sdk")
+// const aws= require("aws-sdk")
 
 const middleware= require("../middleware/middleware")
 
